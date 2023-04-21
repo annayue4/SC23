@@ -1,0 +1,106 @@
+cat "/sys/cray/pm_counters/energy" >> genoa-pmc
+cat "/sys/cray/pm_counters/cpu_energy" >> genoa-pmc
+cat "/sys/cray/pm_counters/memory_energy" >> genoa-pmc &
+wait
+
+numactl -m 0 -C 0 ./xwrf2017 &
+numactl -m 0 -C 1 ./xwrf2017 &
+numactl -m 0 -C 2 ./xwrf2017 &
+numactl -m 0 -C 3 ./xwrf2017 &
+numactl -m 0 -C 4 ./xwrf2017 &
+numactl -m 0 -C 5 ./xwrf2017 &
+numactl -m 0 -C 6 ./xwrf2017 &
+numactl -m 0 -C 7 ./xwrf2017 &
+numactl -m 0 -C 8 ./xwrf2017 &
+numactl -m 0 -C 9 ./xwrf2017 &
+numactl -m 0 -C 10 ./xwrf2017 &
+numactl -m 0 -C 11 ./xwrf2017 &
+numactl -m 0 -C 12 ./xwrf2017 &
+numactl -m 0 -C 13 ./xwrf2017 &
+numactl -m 0 -C 14 ./xwrf2017 &
+numactl -m 0 -C 15 ./xwrf2017 &
+numactl -m 0 -C 16 ./xwrf2017 &
+numactl -m 0 -C 17 ./xwrf2017 &
+numactl -m 0 -C 18 ./xwrf2017 &
+numactl -m 0 -C 19 ./xwrf2017 &
+numactl -m 0 -C 20 ./xwrf2017 &
+numactl -m 0 -C 21 ./xwrf2017 &
+numactl -m 0 -C 22 ./xwrf2017 &
+numactl -m 0 -C 23 ./xwrf2017 &
+numactl -m 1 -C 24 ./xwrf2017 &
+numactl -m 1 -C 25 ./xwrf2017 &
+numactl -m 1 -C 26 ./xwrf2017 &
+numactl -m 1 -C 27 ./xwrf2017 &
+numactl -m 1 -C 28 ./xwrf2017 &
+numactl -m 1 -C 29 ./xwrf2017 &
+numactl -m 1 -C 30 ./xwrf2017 &
+numactl -m 1 -C 31 ./xwrf2017 &
+numactl -m 1 -C 32 ./xwrf2017 &
+numactl -m 1 -C 33 ./xwrf2017 &
+numactl -m 1 -C 34 ./xwrf2017 &
+numactl -m 1 -C 35 ./xwrf2017 &
+numactl -m 1 -C 36 perf record -e cpu-cycles,cpu-clock ./xwrf2017 &
+numactl -m 1 -C 37 ./xwrf2017 &
+numactl -m 1 -C 38 ./xwrf2017 &
+numactl -m 1 -C 39 ./xwrf2017 &
+numactl -m 1 -C 40 ./xwrf2017 &
+numactl -m 1 -C 41 ./xwrf2017 &
+numactl -m 1 -C 42 ./xwrf2017 &
+numactl -m 1 -C 43 ./xwrf2017 &
+numactl -m 1 -C 44 ./xwrf2017 &
+numactl -m 1 -C 45 ./xwrf2017 &
+numactl -m 1 -C 46 ./xwrf2017 &
+numactl -m 1 -C 47 ./xwrf2017 &
+numactl -m 2 -C 48 ./xwrf2017 &
+numactl -m 2 -C 49 ./xwrf2017 &
+numactl -m 2 -C 50 ./xwrf2017 &
+numactl -m 2 -C 51 ./xwrf2017 &
+numactl -m 2 -C 52 ./xwrf2017 &
+numactl -m 2 -C 53 ./xwrf2017 &
+numactl -m 2 -C 54 ./xwrf2017 &
+numactl -m 2 -C 55 ./xwrf2017 &
+numactl -m 2 -C 56 ./xwrf2017 &
+numactl -m 2 -C 57 ./xwrf2017 &
+numactl -m 2 -C 58 ./xwrf2017 &
+numactl -m 2 -C 59 ./xwrf2017 &
+numactl -m 2 -C 60 ./xwrf2017 &
+numactl -m 2 -C 61 ./xwrf2017 &
+numactl -m 2 -C 62 ./xwrf2017 &
+numactl -m 2 -C 63 ./xwrf2017 &
+numactl -m 2 -C 64 ./xwrf2017 &
+numactl -m 2 -C 65 ./xwrf2017 &
+numactl -m 2 -C 66 ./xwrf2017 &
+numactl -m 2 -C 67 ./xwrf2017 &
+numactl -m 2 -C 68 ./xwrf2017 &
+numactl -m 2 -C 69 ./xwrf2017 &
+numactl -m 2 -C 70 ./xwrf2017 &
+numactl -m 2 -C 71 ./xwrf2017 &
+numactl -m 3 -C 72 ./xwrf2017 &
+numactl -m 3 -C 73 ./xwrf2017 &
+numactl -m 3 -C 74 ./xwrf2017 &
+numactl -m 3 -C 75 ./xwrf2017 &
+numactl -m 3 -C 76 ./xwrf2017 &
+numactl -m 3 -C 77 ./xwrf2017 &
+numactl -m 3 -C 78 ./xwrf2017 &
+numactl -m 3 -C 79 ./xwrf2017 &
+numactl -m 3 -C 80 ./xwrf2017 &
+numactl -m 3 -C 81 ./xwrf2017 &
+numactl -m 3 -C 82 ./xwrf2017 &
+numactl -m 3 -C 83 ./xwrf2017 &
+numactl -m 3 -C 84 ./xwrf2017 &
+numactl -m 3 -C 85 ./xwrf2017 &
+numactl -m 3 -C 86 ./xwrf2017 &
+numactl -m 3 -C 87 ./xwrf2017 &
+numactl -m 3 -C 88 ./xwrf2017 &
+numactl -m 3 -C 89 ./xwrf2017 &
+numactl -m 3 -C 90 ./xwrf2017 &
+numactl -m 3 -C 91 ./xwrf2017 &
+numactl -m 3 -C 92 ./xwrf2017 &
+numactl -m 3 -C 93 ./xwrf2017 &
+numactl -m 3 -C 94 ./xwrf2017 &
+numactl -m 3 -C 95 ./xwrf2017 &
+
+wait
+cat "/sys/cray/pm_counters/energy" >> genoa-pmc
+cat "/sys/cray/pm_counters/cpu_energy" >> genoa-pmc
+cat "/sys/cray/pm_counters/memory_energy" >> genoa-pmc &

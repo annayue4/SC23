@@ -1,0 +1,106 @@
+cat "/sys/cray/pm_counters/energy" >> genoa-pmc
+cat "/sys/cray/pm_counters/cpu_energy" >> genoa-pmc
+cat "/sys/cray/pm_counters/memory_energy" >> genoa-pmc &
+wait
+
+numactl -m 0 -C 0 ./xmcf2017 ./data/refrate/input/inp.in &
+numactl -m 0 -C 1 ./xmcf2017 ./data/refrate/input/inp.in &
+numactl -m 0 -C 2 ./xmcf2017 ./data/refrate/input/inp.in &
+numactl -m 0 -C 3 ./xmcf2017 ./data/refrate/input/inp.in &
+numactl -m 0 -C 4 ./xmcf2017 ./data/refrate/input/inp.in &
+numactl -m 0 -C 5 ./xmcf2017 ./data/refrate/input/inp.in &
+numactl -m 0 -C 6 ./xmcf2017 ./data/refrate/input/inp.in &
+numactl -m 0 -C 7 ./xmcf2017 ./data/refrate/input/inp.in &
+numactl -m 0 -C 8 ./xmcf2017 ./data/refrate/input/inp.in &
+numactl -m 0 -C 9 ./xmcf2017 ./data/refrate/input/inp.in &
+numactl -m 0 -C 10 ./xmcf2017 ./data/refrate/input/inp.in &
+numactl -m 0 -C 11 ./xmcf2017 ./data/refrate/input/inp.in &
+numactl -m 0 -C 12 ./xmcf2017 ./data/refrate/input/inp.in &
+numactl -m 0 -C 13 ./xmcf2017 ./data/refrate/input/inp.in &
+numactl -m 0 -C 14 ./xmcf2017 ./data/refrate/input/inp.in &
+numactl -m 0 -C 15 ./xmcf2017 ./data/refrate/input/inp.in &
+numactl -m 0 -C 16 ./xmcf2017 ./data/refrate/input/inp.in &
+numactl -m 0 -C 17 ./xmcf2017 ./data/refrate/input/inp.in &
+numactl -m 0 -C 18 ./xmcf2017 ./data/refrate/input/inp.in &
+numactl -m 0 -C 19 ./xmcf2017 ./data/refrate/input/inp.in &
+numactl -m 0 -C 20 ./xmcf2017 ./data/refrate/input/inp.in &
+numactl -m 0 -C 21 ./xmcf2017 ./data/refrate/input/inp.in &
+numactl -m 0 -C 22 ./xmcf2017 ./data/refrate/input/inp.in &
+numactl -m 0 -C 23 ./xmcf2017 ./data/refrate/input/inp.in &
+numactl -m 1 -C 24 ./xmcf2017 ./data/refrate/input/inp.in &
+numactl -m 1 -C 25 ./xmcf2017 ./data/refrate/input/inp.in &
+numactl -m 1 -C 26 ./xmcf2017 ./data/refrate/input/inp.in &
+numactl -m 1 -C 27 ./xmcf2017 ./data/refrate/input/inp.in &
+numactl -m 1 -C 28 ./xmcf2017 ./data/refrate/input/inp.in &
+numactl -m 1 -C 29 ./xmcf2017 ./data/refrate/input/inp.in &
+numactl -m 1 -C 30 ./xmcf2017 ./data/refrate/input/inp.in &
+numactl -m 1 -C 31 ./xmcf2017 ./data/refrate/input/inp.in &
+numactl -m 1 -C 32 ./xmcf2017 ./data/refrate/input/inp.in &
+numactl -m 1 -C 33 ./xmcf2017 ./data/refrate/input/inp.in &
+numactl -m 1 -C 34 ./xmcf2017 ./data/refrate/input/inp.in &
+numactl -m 1 -C 35 ./xmcf2017 ./data/refrate/input/inp.in &
+numactl -m 1 -C 36 perf record -e cpu-cycles,cpu-clock  ./xmcf2017 ./data/refrate/input/inp.in &
+numactl -m 1 -C 37 ./xmcf2017 ./data/refrate/input/inp.in &
+numactl -m 1 -C 38 ./xmcf2017 ./data/refrate/input/inp.in &
+numactl -m 1 -C 39 ./xmcf2017 ./data/refrate/input/inp.in &
+numactl -m 1 -C 40 ./xmcf2017 ./data/refrate/input/inp.in &
+numactl -m 1 -C 41 ./xmcf2017 ./data/refrate/input/inp.in &
+numactl -m 1 -C 42 ./xmcf2017 ./data/refrate/input/inp.in &
+numactl -m 1 -C 43 ./xmcf2017 ./data/refrate/input/inp.in &
+numactl -m 1 -C 44 ./xmcf2017 ./data/refrate/input/inp.in &
+numactl -m 1 -C 45 ./xmcf2017 ./data/refrate/input/inp.in &
+numactl -m 1 -C 46 ./xmcf2017 ./data/refrate/input/inp.in &
+numactl -m 1 -C 47 ./xmcf2017 ./data/refrate/input/inp.in &
+numactl -m 2 -C 48 ./xmcf2017 ./data/refrate/input/inp.in &
+numactl -m 2 -C 49 ./xmcf2017 ./data/refrate/input/inp.in &
+numactl -m 2 -C 50 ./xmcf2017 ./data/refrate/input/inp.in &
+numactl -m 2 -C 51 ./xmcf2017 ./data/refrate/input/inp.in &
+numactl -m 2 -C 52 ./xmcf2017 ./data/refrate/input/inp.in &
+numactl -m 2 -C 53 ./xmcf2017 ./data/refrate/input/inp.in &
+numactl -m 2 -C 54 ./xmcf2017 ./data/refrate/input/inp.in &
+numactl -m 2 -C 55 ./xmcf2017 ./data/refrate/input/inp.in &
+numactl -m 2 -C 56 ./xmcf2017 ./data/refrate/input/inp.in &
+numactl -m 2 -C 57 ./xmcf2017 ./data/refrate/input/inp.in &
+numactl -m 2 -C 58 ./xmcf2017 ./data/refrate/input/inp.in &
+numactl -m 2 -C 59 ./xmcf2017 ./data/refrate/input/inp.in &
+numactl -m 2 -C 60 ./xmcf2017 ./data/refrate/input/inp.in &
+numactl -m 2 -C 61 ./xmcf2017 ./data/refrate/input/inp.in &
+numactl -m 2 -C 62 ./xmcf2017 ./data/refrate/input/inp.in &
+numactl -m 2 -C 63 ./xmcf2017 ./data/refrate/input/inp.in &
+numactl -m 2 -C 64 ./xmcf2017 ./data/refrate/input/inp.in &
+numactl -m 2 -C 65 ./xmcf2017 ./data/refrate/input/inp.in &
+numactl -m 2 -C 66 ./xmcf2017 ./data/refrate/input/inp.in &
+numactl -m 2 -C 67 ./xmcf2017 ./data/refrate/input/inp.in &
+numactl -m 2 -C 68 ./xmcf2017 ./data/refrate/input/inp.in &
+numactl -m 2 -C 69 ./xmcf2017 ./data/refrate/input/inp.in &
+numactl -m 2 -C 70 ./xmcf2017 ./data/refrate/input/inp.in &
+numactl -m 2 -C 71 ./xmcf2017 ./data/refrate/input/inp.in &
+numactl -m 3 -C 72 ./xmcf2017 ./data/refrate/input/inp.in &
+numactl -m 3 -C 73 ./xmcf2017 ./data/refrate/input/inp.in &
+numactl -m 3 -C 74 ./xmcf2017 ./data/refrate/input/inp.in &
+numactl -m 3 -C 75 ./xmcf2017 ./data/refrate/input/inp.in &
+numactl -m 3 -C 76 ./xmcf2017 ./data/refrate/input/inp.in &
+numactl -m 3 -C 77 ./xmcf2017 ./data/refrate/input/inp.in &
+numactl -m 3 -C 78 ./xmcf2017 ./data/refrate/input/inp.in &
+numactl -m 3 -C 79 ./xmcf2017 ./data/refrate/input/inp.in &
+numactl -m 3 -C 80 ./xmcf2017 ./data/refrate/input/inp.in &
+numactl -m 3 -C 81 ./xmcf2017 ./data/refrate/input/inp.in &
+numactl -m 3 -C 82 ./xmcf2017 ./data/refrate/input/inp.in &
+numactl -m 3 -C 83 ./xmcf2017 ./data/refrate/input/inp.in &
+numactl -m 3 -C 84 ./xmcf2017 ./data/refrate/input/inp.in &
+numactl -m 3 -C 85 ./xmcf2017 ./data/refrate/input/inp.in &
+numactl -m 3 -C 86 ./xmcf2017 ./data/refrate/input/inp.in &
+numactl -m 3 -C 87 ./xmcf2017 ./data/refrate/input/inp.in &
+numactl -m 3 -C 88 ./xmcf2017 ./data/refrate/input/inp.in &
+numactl -m 3 -C 89 ./xmcf2017 ./data/refrate/input/inp.in &
+numactl -m 3 -C 90 ./xmcf2017 ./data/refrate/input/inp.in &
+numactl -m 3 -C 91 ./xmcf2017 ./data/refrate/input/inp.in &
+numactl -m 3 -C 92 ./xmcf2017 ./data/refrate/input/inp.in &
+numactl -m 3 -C 93 ./xmcf2017 ./data/refrate/input/inp.in &
+numactl -m 3 -C 94 ./xmcf2017 ./data/refrate/input/inp.in &
+numactl -m 3 -C 95 ./xmcf2017 ./data/refrate/input/inp.in &
+
+wait
+cat "/sys/cray/pm_counters/energy" >> genoa-pmc
+cat "/sys/cray/pm_counters/cpu_energy" >> genoa-pmc
+cat "/sys/cray/pm_counters/memory_energy" >> genoa-pmc &

@@ -1,0 +1,106 @@
+cat "/sys/cray/pm_counters/energy" >> genoa-pmc
+cat "/sys/cray/pm_counters/cpu_energy" >> genoa-pmc
+cat "/sys/cray/pm_counters/memory_energy" >> genoa-pmc &
+wait
+
+numactl -m 0 -C 0 ./xleela2017 data/refrate/input/ref.sgf &
+numactl -m 0 -C 1 ./xleela2017 data/refrate/input/ref.sgf &
+numactl -m 0 -C 2 ./xleela2017 data/refrate/input/ref.sgf &
+numactl -m 0 -C 3 ./xleela2017 data/refrate/input/ref.sgf &
+numactl -m 0 -C 4 ./xleela2017 data/refrate/input/ref.sgf &
+numactl -m 0 -C 5 ./xleela2017 data/refrate/input/ref.sgf &
+numactl -m 0 -C 6 ./xleela2017 data/refrate/input/ref.sgf &
+numactl -m 0 -C 7 ./xleela2017 data/refrate/input/ref.sgf &
+numactl -m 0 -C 8 ./xleela2017 data/refrate/input/ref.sgf &
+numactl -m 0 -C 9 ./xleela2017 data/refrate/input/ref.sgf &
+numactl -m 0 -C 10 ./xleela2017 data/refrate/input/ref.sgf &
+numactl -m 0 -C 11 ./xleela2017 data/refrate/input/ref.sgf &
+numactl -m 0 -C 12 ./xleela2017 data/refrate/input/ref.sgf &
+numactl -m 0 -C 13 ./xleela2017 data/refrate/input/ref.sgf &
+numactl -m 0 -C 14 ./xleela2017 data/refrate/input/ref.sgf &
+numactl -m 0 -C 15 ./xleela2017 data/refrate/input/ref.sgf &
+numactl -m 0 -C 16 ./xleela2017 data/refrate/input/ref.sgf &
+numactl -m 0 -C 17 ./xleela2017 data/refrate/input/ref.sgf &
+numactl -m 0 -C 18 ./xleela2017 data/refrate/input/ref.sgf &
+numactl -m 0 -C 19 ./xleela2017 data/refrate/input/ref.sgf &
+numactl -m 0 -C 20 ./xleela2017 data/refrate/input/ref.sgf &
+numactl -m 0 -C 21 ./xleela2017 data/refrate/input/ref.sgf &
+numactl -m 0 -C 22 ./xleela2017 data/refrate/input/ref.sgf &
+numactl -m 0 -C 23 ./xleela2017 data/refrate/input/ref.sgf &
+numactl -m 1 -C 24 ./xleela2017 data/refrate/input/ref.sgf &
+numactl -m 1 -C 25 ./xleela2017 data/refrate/input/ref.sgf &
+numactl -m 1 -C 26 ./xleela2017 data/refrate/input/ref.sgf &
+numactl -m 1 -C 27 ./xleela2017 data/refrate/input/ref.sgf &
+numactl -m 1 -C 28 ./xleela2017 data/refrate/input/ref.sgf &
+numactl -m 1 -C 29 ./xleela2017 data/refrate/input/ref.sgf &
+numactl -m 1 -C 30 ./xleela2017 data/refrate/input/ref.sgf &
+numactl -m 1 -C 31 ./xleela2017 data/refrate/input/ref.sgf &
+numactl -m 1 -C 32 ./xleela2017 data/refrate/input/ref.sgf &
+numactl -m 1 -C 33 ./xleela2017 data/refrate/input/ref.sgf &
+numactl -m 1 -C 34 ./xleela2017 data/refrate/input/ref.sgf &
+numactl -m 1 -C 35 ./xleela2017 data/refrate/input/ref.sgf &
+numactl -m 1 -C 36 perf record -e cpu-cycles,cpu-clock ./xleela2017 data/refrate/input/ref.sgf &
+numactl -m 1 -C 37 ./xleela2017 data/refrate/input/ref.sgf &
+numactl -m 1 -C 38 ./xleela2017 data/refrate/input/ref.sgf &
+numactl -m 1 -C 39 ./xleela2017 data/refrate/input/ref.sgf &
+numactl -m 1 -C 40 ./xleela2017 data/refrate/input/ref.sgf &
+numactl -m 1 -C 41 ./xleela2017 data/refrate/input/ref.sgf &
+numactl -m 1 -C 42 ./xleela2017 data/refrate/input/ref.sgf &
+numactl -m 1 -C 43 ./xleela2017 data/refrate/input/ref.sgf &
+numactl -m 1 -C 44 ./xleela2017 data/refrate/input/ref.sgf &
+numactl -m 1 -C 45 ./xleela2017 data/refrate/input/ref.sgf &
+numactl -m 1 -C 46 ./xleela2017 data/refrate/input/ref.sgf &
+numactl -m 1 -C 47 ./xleela2017 data/refrate/input/ref.sgf &
+numactl -m 2 -C 48 ./xleela2017 data/refrate/input/ref.sgf &
+numactl -m 2 -C 49 ./xleela2017 data/refrate/input/ref.sgf &
+numactl -m 2 -C 50 ./xleela2017 data/refrate/input/ref.sgf &
+numactl -m 2 -C 51 ./xleela2017 data/refrate/input/ref.sgf &
+numactl -m 2 -C 52 ./xleela2017 data/refrate/input/ref.sgf &
+numactl -m 2 -C 53 ./xleela2017 data/refrate/input/ref.sgf &
+numactl -m 2 -C 54 ./xleela2017 data/refrate/input/ref.sgf &
+numactl -m 2 -C 55 ./xleela2017 data/refrate/input/ref.sgf &
+numactl -m 2 -C 56 ./xleela2017 data/refrate/input/ref.sgf &
+numactl -m 2 -C 57 ./xleela2017 data/refrate/input/ref.sgf &
+numactl -m 2 -C 58 ./xleela2017 data/refrate/input/ref.sgf &
+numactl -m 2 -C 59 ./xleela2017 data/refrate/input/ref.sgf &
+numactl -m 2 -C 60 ./xleela2017 data/refrate/input/ref.sgf &
+numactl -m 2 -C 61 ./xleela2017 data/refrate/input/ref.sgf &
+numactl -m 2 -C 62 ./xleela2017 data/refrate/input/ref.sgf &
+numactl -m 2 -C 63 ./xleela2017 data/refrate/input/ref.sgf &
+numactl -m 2 -C 64 ./xleela2017 data/refrate/input/ref.sgf &
+numactl -m 2 -C 65 ./xleela2017 data/refrate/input/ref.sgf &
+numactl -m 2 -C 66 ./xleela2017 data/refrate/input/ref.sgf &
+numactl -m 2 -C 67 ./xleela2017 data/refrate/input/ref.sgf &
+numactl -m 2 -C 68 ./xleela2017 data/refrate/input/ref.sgf &
+numactl -m 2 -C 69 ./xleela2017 data/refrate/input/ref.sgf &
+numactl -m 2 -C 70 ./xleela2017 data/refrate/input/ref.sgf &
+numactl -m 2 -C 71 ./xleela2017 data/refrate/input/ref.sgf &
+numactl -m 3 -C 72 ./xleela2017 data/refrate/input/ref.sgf &
+numactl -m 3 -C 73 ./xleela2017 data/refrate/input/ref.sgf &
+numactl -m 3 -C 74 ./xleela2017 data/refrate/input/ref.sgf &
+numactl -m 3 -C 75 ./xleela2017 data/refrate/input/ref.sgf &
+numactl -m 3 -C 76 ./xleela2017 data/refrate/input/ref.sgf &
+numactl -m 3 -C 77 ./xleela2017 data/refrate/input/ref.sgf &
+numactl -m 3 -C 78 ./xleela2017 data/refrate/input/ref.sgf &
+numactl -m 3 -C 79 ./xleela2017 data/refrate/input/ref.sgf &
+numactl -m 3 -C 80 ./xleela2017 data/refrate/input/ref.sgf &
+numactl -m 3 -C 81 ./xleela2017 data/refrate/input/ref.sgf &
+numactl -m 3 -C 82 ./xleela2017 data/refrate/input/ref.sgf &
+numactl -m 3 -C 83 ./xleela2017 data/refrate/input/ref.sgf &
+numactl -m 3 -C 84 ./xleela2017 data/refrate/input/ref.sgf &
+numactl -m 3 -C 85 ./xleela2017 data/refrate/input/ref.sgf &
+numactl -m 3 -C 86 ./xleela2017 data/refrate/input/ref.sgf &
+numactl -m 3 -C 87 ./xleela2017 data/refrate/input/ref.sgf &
+numactl -m 3 -C 88 ./xleela2017 data/refrate/input/ref.sgf &
+numactl -m 3 -C 89 ./xleela2017 data/refrate/input/ref.sgf &
+numactl -m 3 -C 90 ./xleela2017 data/refrate/input/ref.sgf &
+numactl -m 3 -C 91 ./xleela2017 data/refrate/input/ref.sgf &
+numactl -m 3 -C 92 ./xleela2017 data/refrate/input/ref.sgf &
+numactl -m 3 -C 93 ./xleela2017 data/refrate/input/ref.sgf &
+numactl -m 3 -C 94 ./xleela2017 data/refrate/input/ref.sgf &
+numactl -m 3 -C 95 ./xleela2017 data/refrate/input/ref.sgf &
+
+wait
+cat "/sys/cray/pm_counters/energy" >> genoa-pmc
+cat "/sys/cray/pm_counters/cpu_energy" >> genoa-pmc
+cat "/sys/cray/pm_counters/memory_energy" >> genoa-pmc &

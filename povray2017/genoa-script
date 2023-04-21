@@ -1,0 +1,106 @@
+cat "/sys/cray/pm_counters/energy" >> genoa-pmc
+cat "/sys/cray/pm_counters/cpu_energy" >> genoa-pmc
+cat "/sys/cray/pm_counters/memory_energy" >> genoa-pmc &
+wait
+
+numactl -m 0 -C 0 ./xpovray2017 +L./data/all/input ./data/refrate/input/SPEC-benchmark-ref.ini &
+numactl -m 0 -C 1 ./xpovray2017 +L./data/all/input ./data/refrate/input/SPEC-benchmark-ref.ini &
+numactl -m 0 -C 2 ./xpovray2017 +L./data/all/input ./data/refrate/input/SPEC-benchmark-ref.ini &
+numactl -m 0 -C 3 ./xpovray2017 +L./data/all/input ./data/refrate/input/SPEC-benchmark-ref.ini &
+numactl -m 0 -C 4 ./xpovray2017 +L./data/all/input ./data/refrate/input/SPEC-benchmark-ref.ini &
+numactl -m 0 -C 5 ./xpovray2017 +L./data/all/input ./data/refrate/input/SPEC-benchmark-ref.ini &
+numactl -m 0 -C 6 ./xpovray2017 +L./data/all/input ./data/refrate/input/SPEC-benchmark-ref.ini &
+numactl -m 0 -C 7 ./xpovray2017 +L./data/all/input ./data/refrate/input/SPEC-benchmark-ref.ini &
+numactl -m 0 -C 8 ./xpovray2017 +L./data/all/input ./data/refrate/input/SPEC-benchmark-ref.ini &
+numactl -m 0 -C 9 ./xpovray2017 +L./data/all/input ./data/refrate/input/SPEC-benchmark-ref.ini &
+numactl -m 0 -C 10 ./xpovray2017 +L./data/all/input ./data/refrate/input/SPEC-benchmark-ref.ini &
+numactl -m 0 -C 11 ./xpovray2017 +L./data/all/input ./data/refrate/input/SPEC-benchmark-ref.ini &
+numactl -m 0 -C 12 ./xpovray2017 +L./data/all/input ./data/refrate/input/SPEC-benchmark-ref.ini &
+numactl -m 0 -C 13 ./xpovray2017 +L./data/all/input ./data/refrate/input/SPEC-benchmark-ref.ini &
+numactl -m 0 -C 14 ./xpovray2017 +L./data/all/input ./data/refrate/input/SPEC-benchmark-ref.ini &
+numactl -m 0 -C 15 ./xpovray2017 +L./data/all/input ./data/refrate/input/SPEC-benchmark-ref.ini &
+numactl -m 0 -C 16 ./xpovray2017 +L./data/all/input ./data/refrate/input/SPEC-benchmark-ref.ini &
+numactl -m 0 -C 17 ./xpovray2017 +L./data/all/input ./data/refrate/input/SPEC-benchmark-ref.ini &
+numactl -m 0 -C 18 ./xpovray2017 +L./data/all/input ./data/refrate/input/SPEC-benchmark-ref.ini &
+numactl -m 0 -C 19 ./xpovray2017 +L./data/all/input ./data/refrate/input/SPEC-benchmark-ref.ini &
+numactl -m 0 -C 20 ./xpovray2017 +L./data/all/input ./data/refrate/input/SPEC-benchmark-ref.ini &
+numactl -m 0 -C 21 ./xpovray2017 +L./data/all/input ./data/refrate/input/SPEC-benchmark-ref.ini &
+numactl -m 0 -C 22 ./xpovray2017 +L./data/all/input ./data/refrate/input/SPEC-benchmark-ref.ini &
+numactl -m 0 -C 23 ./xpovray2017 +L./data/all/input ./data/refrate/input/SPEC-benchmark-ref.ini &
+numactl -m 1 -C 24 ./xpovray2017 +L./data/all/input ./data/refrate/input/SPEC-benchmark-ref.ini &
+numactl -m 1 -C 25 ./xpovray2017 +L./data/all/input ./data/refrate/input/SPEC-benchmark-ref.ini &
+numactl -m 1 -C 26 ./xpovray2017 +L./data/all/input ./data/refrate/input/SPEC-benchmark-ref.ini &
+numactl -m 1 -C 27 ./xpovray2017 +L./data/all/input ./data/refrate/input/SPEC-benchmark-ref.ini &
+numactl -m 1 -C 28 ./xpovray2017 +L./data/all/input ./data/refrate/input/SPEC-benchmark-ref.ini &
+numactl -m 1 -C 29 ./xpovray2017 +L./data/all/input ./data/refrate/input/SPEC-benchmark-ref.ini &
+numactl -m 1 -C 30 ./xpovray2017 +L./data/all/input ./data/refrate/input/SPEC-benchmark-ref.ini &
+numactl -m 1 -C 31 ./xpovray2017 +L./data/all/input ./data/refrate/input/SPEC-benchmark-ref.ini &
+numactl -m 1 -C 32 ./xpovray2017 +L./data/all/input ./data/refrate/input/SPEC-benchmark-ref.ini &
+numactl -m 1 -C 33 ./xpovray2017 +L./data/all/input ./data/refrate/input/SPEC-benchmark-ref.ini &
+numactl -m 1 -C 34 ./xpovray2017 +L./data/all/input ./data/refrate/input/SPEC-benchmark-ref.ini &
+numactl -m 1 -C 35 ./xpovray2017 +L./data/all/input ./data/refrate/input/SPEC-benchmark-ref.ini &
+numactl -m 1 -C 36 perf record -e cpu-cycles,cpu-clock ./xpovray2017 +L./data/all/input ./data/refrate/input/SPEC-benchmark-ref.ini &
+numactl -m 1 -C 37 ./xpovray2017 +L./data/all/input ./data/refrate/input/SPEC-benchmark-ref.ini &
+numactl -m 1 -C 38 ./xpovray2017 +L./data/all/input ./data/refrate/input/SPEC-benchmark-ref.ini &
+numactl -m 1 -C 39 ./xpovray2017 +L./data/all/input ./data/refrate/input/SPEC-benchmark-ref.ini &
+numactl -m 1 -C 40 ./xpovray2017 +L./data/all/input ./data/refrate/input/SPEC-benchmark-ref.ini &
+numactl -m 1 -C 41 ./xpovray2017 +L./data/all/input ./data/refrate/input/SPEC-benchmark-ref.ini &
+numactl -m 1 -C 42 ./xpovray2017 +L./data/all/input ./data/refrate/input/SPEC-benchmark-ref.ini &
+numactl -m 1 -C 43 ./xpovray2017 +L./data/all/input ./data/refrate/input/SPEC-benchmark-ref.ini &
+numactl -m 1 -C 44 ./xpovray2017 +L./data/all/input ./data/refrate/input/SPEC-benchmark-ref.ini &
+numactl -m 1 -C 45 ./xpovray2017 +L./data/all/input ./data/refrate/input/SPEC-benchmark-ref.ini &
+numactl -m 1 -C 46 ./xpovray2017 +L./data/all/input ./data/refrate/input/SPEC-benchmark-ref.ini &
+numactl -m 1 -C 47 ./xpovray2017 +L./data/all/input ./data/refrate/input/SPEC-benchmark-ref.ini &
+numactl -m 2 -C 48 ./xpovray2017 +L./data/all/input ./data/refrate/input/SPEC-benchmark-ref.ini &
+numactl -m 2 -C 49 ./xpovray2017 +L./data/all/input ./data/refrate/input/SPEC-benchmark-ref.ini &
+numactl -m 2 -C 50 ./xpovray2017 +L./data/all/input ./data/refrate/input/SPEC-benchmark-ref.ini &
+numactl -m 2 -C 51 ./xpovray2017 +L./data/all/input ./data/refrate/input/SPEC-benchmark-ref.ini &
+numactl -m 2 -C 52 ./xpovray2017 +L./data/all/input ./data/refrate/input/SPEC-benchmark-ref.ini &
+numactl -m 2 -C 53 ./xpovray2017 +L./data/all/input ./data/refrate/input/SPEC-benchmark-ref.ini &
+numactl -m 2 -C 54 ./xpovray2017 +L./data/all/input ./data/refrate/input/SPEC-benchmark-ref.ini &
+numactl -m 2 -C 55 ./xpovray2017 +L./data/all/input ./data/refrate/input/SPEC-benchmark-ref.ini &
+numactl -m 2 -C 56 ./xpovray2017 +L./data/all/input ./data/refrate/input/SPEC-benchmark-ref.ini &
+numactl -m 2 -C 57 ./xpovray2017 +L./data/all/input ./data/refrate/input/SPEC-benchmark-ref.ini &
+numactl -m 2 -C 58 ./xpovray2017 +L./data/all/input ./data/refrate/input/SPEC-benchmark-ref.ini &
+numactl -m 2 -C 59 ./xpovray2017 +L./data/all/input ./data/refrate/input/SPEC-benchmark-ref.ini &
+numactl -m 2 -C 60 ./xpovray2017 +L./data/all/input ./data/refrate/input/SPEC-benchmark-ref.ini &
+numactl -m 2 -C 61 ./xpovray2017 +L./data/all/input ./data/refrate/input/SPEC-benchmark-ref.ini &
+numactl -m 2 -C 62 ./xpovray2017 +L./data/all/input ./data/refrate/input/SPEC-benchmark-ref.ini &
+numactl -m 2 -C 63 ./xpovray2017 +L./data/all/input ./data/refrate/input/SPEC-benchmark-ref.ini &
+numactl -m 2 -C 64 ./xpovray2017 +L./data/all/input ./data/refrate/input/SPEC-benchmark-ref.ini &
+numactl -m 2 -C 65 ./xpovray2017 +L./data/all/input ./data/refrate/input/SPEC-benchmark-ref.ini &
+numactl -m 2 -C 66 ./xpovray2017 +L./data/all/input ./data/refrate/input/SPEC-benchmark-ref.ini &
+numactl -m 2 -C 67 ./xpovray2017 +L./data/all/input ./data/refrate/input/SPEC-benchmark-ref.ini &
+numactl -m 2 -C 68 ./xpovray2017 +L./data/all/input ./data/refrate/input/SPEC-benchmark-ref.ini &
+numactl -m 2 -C 69 ./xpovray2017 +L./data/all/input ./data/refrate/input/SPEC-benchmark-ref.ini &
+numactl -m 2 -C 70 ./xpovray2017 +L./data/all/input ./data/refrate/input/SPEC-benchmark-ref.ini &
+numactl -m 2 -C 71 ./xpovray2017 +L./data/all/input ./data/refrate/input/SPEC-benchmark-ref.ini &
+numactl -m 3 -C 72 ./xpovray2017 +L./data/all/input ./data/refrate/input/SPEC-benchmark-ref.ini &
+numactl -m 3 -C 73 ./xpovray2017 +L./data/all/input ./data/refrate/input/SPEC-benchmark-ref.ini &
+numactl -m 3 -C 74 ./xpovray2017 +L./data/all/input ./data/refrate/input/SPEC-benchmark-ref.ini &
+numactl -m 3 -C 75 ./xpovray2017 +L./data/all/input ./data/refrate/input/SPEC-benchmark-ref.ini &
+numactl -m 3 -C 76 ./xpovray2017 +L./data/all/input ./data/refrate/input/SPEC-benchmark-ref.ini &
+numactl -m 3 -C 77 ./xpovray2017 +L./data/all/input ./data/refrate/input/SPEC-benchmark-ref.ini &
+numactl -m 3 -C 78 ./xpovray2017 +L./data/all/input ./data/refrate/input/SPEC-benchmark-ref.ini &
+numactl -m 3 -C 79 ./xpovray2017 +L./data/all/input ./data/refrate/input/SPEC-benchmark-ref.ini &
+numactl -m 3 -C 80 ./xpovray2017 +L./data/all/input ./data/refrate/input/SPEC-benchmark-ref.ini &
+numactl -m 3 -C 81 ./xpovray2017 +L./data/all/input ./data/refrate/input/SPEC-benchmark-ref.ini &
+numactl -m 3 -C 82 ./xpovray2017 +L./data/all/input ./data/refrate/input/SPEC-benchmark-ref.ini &
+numactl -m 3 -C 83 ./xpovray2017 +L./data/all/input ./data/refrate/input/SPEC-benchmark-ref.ini &
+numactl -m 3 -C 84 ./xpovray2017 +L./data/all/input ./data/refrate/input/SPEC-benchmark-ref.ini &
+numactl -m 3 -C 85 ./xpovray2017 +L./data/all/input ./data/refrate/input/SPEC-benchmark-ref.ini &
+numactl -m 3 -C 86 ./xpovray2017 +L./data/all/input ./data/refrate/input/SPEC-benchmark-ref.ini &
+numactl -m 3 -C 87 ./xpovray2017 +L./data/all/input ./data/refrate/input/SPEC-benchmark-ref.ini &
+numactl -m 3 -C 88 ./xpovray2017 +L./data/all/input ./data/refrate/input/SPEC-benchmark-ref.ini &
+numactl -m 3 -C 89 ./xpovray2017 +L./data/all/input ./data/refrate/input/SPEC-benchmark-ref.ini &
+numactl -m 3 -C 90 ./xpovray2017 +L./data/all/input ./data/refrate/input/SPEC-benchmark-ref.ini &
+numactl -m 3 -C 91 ./xpovray2017 +L./data/all/input ./data/refrate/input/SPEC-benchmark-ref.ini &
+numactl -m 3 -C 92 ./xpovray2017 +L./data/all/input ./data/refrate/input/SPEC-benchmark-ref.ini &
+numactl -m 3 -C 93 ./xpovray2017 +L./data/all/input ./data/refrate/input/SPEC-benchmark-ref.ini &
+numactl -m 3 -C 94 ./xpovray2017 +L./data/all/input ./data/refrate/input/SPEC-benchmark-ref.ini &
+numactl -m 3 -C 95 ./xpovray2017 +L./data/all/input ./data/refrate/input/SPEC-benchmark-ref.ini &
+
+wait
+cat "/sys/cray/pm_counters/energy" >> genoa-pmc
+cat "/sys/cray/pm_counters/cpu_energy" >> genoa-pmc
+cat "/sys/cray/pm_counters/memory_energy" >> genoa-pmc &

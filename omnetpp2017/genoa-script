@@ -1,0 +1,106 @@
+cat "/sys/cray/pm_counters/energy" >> genoa-pmc
+cat "/sys/cray/pm_counters/cpu_energy" >> genoa-pmc
+cat "/sys/cray/pm_counters/memory_energy" >> genoa-pmc &
+wait
+
+numactl -m 0 -C 0 ./xomnetpp2017 -c General -r 0 &
+numactl -m 0 -C 1 ./xomnetpp2017 -c General -r 0 &
+numactl -m 0 -C 2 ./xomnetpp2017 -c General -r 0 &
+numactl -m 0 -C 3 ./xomnetpp2017 -c General -r 0 &
+numactl -m 0 -C 4 ./xomnetpp2017 -c General -r 0 &
+numactl -m 0 -C 5 ./xomnetpp2017 -c General -r 0 &
+numactl -m 0 -C 6 ./xomnetpp2017 -c General -r 0 &
+numactl -m 0 -C 7 ./xomnetpp2017 -c General -r 0 &
+numactl -m 0 -C 8 ./xomnetpp2017 -c General -r 0 &
+numactl -m 0 -C 9 ./xomnetpp2017 -c General -r 0 &
+numactl -m 0 -C 10 ./xomnetpp2017 -c General -r 0 &
+numactl -m 0 -C 11 ./xomnetpp2017 -c General -r 0 &
+numactl -m 0 -C 12 ./xomnetpp2017 -c General -r 0 &
+numactl -m 0 -C 13 ./xomnetpp2017 -c General -r 0 &
+numactl -m 0 -C 14 ./xomnetpp2017 -c General -r 0 &
+numactl -m 0 -C 15 ./xomnetpp2017 -c General -r 0 &
+numactl -m 0 -C 16 ./xomnetpp2017 -c General -r 0 &
+numactl -m 0 -C 17 ./xomnetpp2017 -c General -r 0 &
+numactl -m 0 -C 18 ./xomnetpp2017 -c General -r 0 &
+numactl -m 0 -C 19 ./xomnetpp2017 -c General -r 0 &
+numactl -m 0 -C 20 ./xomnetpp2017 -c General -r 0 &
+numactl -m 0 -C 21 ./xomnetpp2017 -c General -r 0 &
+numactl -m 0 -C 22 ./xomnetpp2017 -c General -r 0 &
+numactl -m 0 -C 23 ./xomnetpp2017 -c General -r 0 &
+numactl -m 1 -C 24 ./xomnetpp2017 -c General -r 0 &
+numactl -m 1 -C 25 ./xomnetpp2017 -c General -r 0 &
+numactl -m 1 -C 26 ./xomnetpp2017 -c General -r 0 &
+numactl -m 1 -C 27 ./xomnetpp2017 -c General -r 0 &
+numactl -m 1 -C 28 ./xomnetpp2017 -c General -r 0 &
+numactl -m 1 -C 29 ./xomnetpp2017 -c General -r 0 &
+numactl -m 1 -C 30 ./xomnetpp2017 -c General -r 0 &
+numactl -m 1 -C 31 ./xomnetpp2017 -c General -r 0 &
+numactl -m 1 -C 32 ./xomnetpp2017 -c General -r 0 &
+numactl -m 1 -C 33 ./xomnetpp2017 -c General -r 0 &
+numactl -m 1 -C 34 ./xomnetpp2017 -c General -r 0 &
+numactl -m 1 -C 35 ./xomnetpp2017 -c General -r 0 &
+numactl -m 1 -C 36 perf record -e cpu-cycles,cpu-clock ./xomnetpp2017 -c General -r 0 &
+numactl -m 1 -C 37 ./xomnetpp2017 -c General -r 0 &
+numactl -m 1 -C 38 ./xomnetpp2017 -c General -r 0 &
+numactl -m 1 -C 39 ./xomnetpp2017 -c General -r 0 &
+numactl -m 1 -C 40 ./xomnetpp2017 -c General -r 0 &
+numactl -m 1 -C 41 ./xomnetpp2017 -c General -r 0 &
+numactl -m 1 -C 42 ./xomnetpp2017 -c General -r 0 &
+numactl -m 1 -C 43 ./xomnetpp2017 -c General -r 0 &
+numactl -m 1 -C 44 ./xomnetpp2017 -c General -r 0 &
+numactl -m 1 -C 45 ./xomnetpp2017 -c General -r 0 &
+numactl -m 1 -C 46 ./xomnetpp2017 -c General -r 0 &
+numactl -m 1 -C 47 ./xomnetpp2017 -c General -r 0 &
+numactl -m 2 -C 48 ./xomnetpp2017 -c General -r 0 &
+numactl -m 2 -C 49 ./xomnetpp2017 -c General -r 0 &
+numactl -m 2 -C 50 ./xomnetpp2017 -c General -r 0 &
+numactl -m 2 -C 51 ./xomnetpp2017 -c General -r 0 &
+numactl -m 2 -C 52 ./xomnetpp2017 -c General -r 0 &
+numactl -m 2 -C 53 ./xomnetpp2017 -c General -r 0 &
+numactl -m 2 -C 54 ./xomnetpp2017 -c General -r 0 &
+numactl -m 2 -C 55 ./xomnetpp2017 -c General -r 0 &
+numactl -m 2 -C 56 ./xomnetpp2017 -c General -r 0 &
+numactl -m 2 -C 57 ./xomnetpp2017 -c General -r 0 &
+numactl -m 2 -C 58 ./xomnetpp2017 -c General -r 0 &
+numactl -m 2 -C 59 ./xomnetpp2017 -c General -r 0 &
+numactl -m 2 -C 60 ./xomnetpp2017 -c General -r 0 &
+numactl -m 2 -C 61 ./xomnetpp2017 -c General -r 0 &
+numactl -m 2 -C 62 ./xomnetpp2017 -c General -r 0 &
+numactl -m 2 -C 63 ./xomnetpp2017 -c General -r 0 &
+numactl -m 2 -C 64 ./xomnetpp2017 -c General -r 0 &
+numactl -m 2 -C 65 ./xomnetpp2017 -c General -r 0 &
+numactl -m 2 -C 66 ./xomnetpp2017 -c General -r 0 &
+numactl -m 2 -C 67 ./xomnetpp2017 -c General -r 0 &
+numactl -m 2 -C 68 ./xomnetpp2017 -c General -r 0 &
+numactl -m 2 -C 69 ./xomnetpp2017 -c General -r 0 &
+numactl -m 2 -C 70 ./xomnetpp2017 -c General -r 0 &
+numactl -m 2 -C 71 ./xomnetpp2017 -c General -r 0 &
+numactl -m 3 -C 72 ./xomnetpp2017 -c General -r 0 &
+numactl -m 3 -C 73 ./xomnetpp2017 -c General -r 0 &
+numactl -m 3 -C 74 ./xomnetpp2017 -c General -r 0 &
+numactl -m 3 -C 75 ./xomnetpp2017 -c General -r 0 &
+numactl -m 3 -C 76 ./xomnetpp2017 -c General -r 0 &
+numactl -m 3 -C 77 ./xomnetpp2017 -c General -r 0 &
+numactl -m 3 -C 78 ./xomnetpp2017 -c General -r 0 &
+numactl -m 3 -C 79 ./xomnetpp2017 -c General -r 0 &
+numactl -m 3 -C 80 ./xomnetpp2017 -c General -r 0 &
+numactl -m 3 -C 81 ./xomnetpp2017 -c General -r 0 &
+numactl -m 3 -C 82 ./xomnetpp2017 -c General -r 0 &
+numactl -m 3 -C 83 ./xomnetpp2017 -c General -r 0 &
+numactl -m 3 -C 84 ./xomnetpp2017 -c General -r 0 &
+numactl -m 3 -C 85 ./xomnetpp2017 -c General -r 0 &
+numactl -m 3 -C 86 ./xomnetpp2017 -c General -r 0 &
+numactl -m 3 -C 87 ./xomnetpp2017 -c General -r 0 &
+numactl -m 3 -C 88 ./xomnetpp2017 -c General -r 0 &
+numactl -m 3 -C 89 ./xomnetpp2017 -c General -r 0 &
+numactl -m 3 -C 90 ./xomnetpp2017 -c General -r 0 &
+numactl -m 3 -C 91 ./xomnetpp2017 -c General -r 0 &
+numactl -m 3 -C 92 ./xomnetpp2017 -c General -r 0 &
+numactl -m 3 -C 93 ./xomnetpp2017 -c General -r 0 &
+numactl -m 3 -C 94 ./xomnetpp2017 -c General -r 0 &
+numactl -m 3 -C 95 ./xomnetpp2017 -c General -r 0 &
+
+wait
+cat "/sys/cray/pm_counters/energy" >> genoa-pmc
+cat "/sys/cray/pm_counters/cpu_energy" >> genoa-pmc
+cat "/sys/cray/pm_counters/memory_energy" >> genoa-pmc &

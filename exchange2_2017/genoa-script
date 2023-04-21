@@ -1,0 +1,107 @@
+#!/bin/bash
+cat "/sys/cray/pm_counters/energy" >> genoa-pmc
+cat "/sys/cray/pm_counters/cpu_energy" >> genoa-pmc
+cat "/sys/cray/pm_counters/memory_energy" >> genoa-pmc &
+wait
+
+numactl -m 0 -C 0 ./xexchange2_2017 6 &
+numactl -m 0 -C 1 ./xexchange2_2017 6 &
+numactl -m 0 -C 2 ./xexchange2_2017 6 &
+numactl -m 0 -C 3 ./xexchange2_2017 6 &
+numactl -m 0 -C 4 ./xexchange2_2017 6 &
+numactl -m 0 -C 5 ./xexchange2_2017 6 &
+numactl -m 0 -C 6 ./xexchange2_2017 6 &
+numactl -m 0 -C 7 ./xexchange2_2017 6 &
+numactl -m 0 -C 8 ./xexchange2_2017 6 &
+numactl -m 0 -C 9 ./xexchange2_2017 6 &
+numactl -m 0 -C 10 ./xexchange2_2017 6 &
+numactl -m 0 -C 11 ./xexchange2_2017 6 &
+numactl -m 0 -C 12 ./xexchange2_2017 6 &
+numactl -m 0 -C 13 ./xexchange2_2017 6 &
+numactl -m 0 -C 14 ./xexchange2_2017 6 &
+numactl -m 0 -C 15 ./xexchange2_2017 6 &
+numactl -m 0 -C 16 ./xexchange2_2017 6 &
+numactl -m 0 -C 17 ./xexchange2_2017 6 &
+numactl -m 0 -C 18 ./xexchange2_2017 6 &
+numactl -m 0 -C 19 ./xexchange2_2017 6 &
+numactl -m 0 -C 20 ./xexchange2_2017 6 &
+numactl -m 0 -C 21 ./xexchange2_2017 6 &
+numactl -m 0 -C 22 ./xexchange2_2017 6 &
+numactl -m 0 -C 23 ./xexchange2_2017 6 &
+numactl -m 1 -C 24 ./xexchange2_2017 6 &
+numactl -m 1 -C 25 ./xexchange2_2017 6 &
+numactl -m 1 -C 26 ./xexchange2_2017 6 &
+numactl -m 1 -C 27 ./xexchange2_2017 6 &
+numactl -m 1 -C 28 ./xexchange2_2017 6 &
+numactl -m 1 -C 29 ./xexchange2_2017 6 &
+numactl -m 1 -C 30 ./xexchange2_2017 6 &
+numactl -m 1 -C 31 ./xexchange2_2017 6 &
+numactl -m 1 -C 32 ./xexchange2_2017 6 &
+numactl -m 1 -C 33 ./xexchange2_2017 6 &
+numactl -m 1 -C 34 ./xexchange2_2017 6 &
+numactl -m 1 -C 35 ./xexchange2_2017 6 &
+numactl -m 1 -C 36 perf record -e cpu-cycles,cpu-clock ./xexchange2_2017 6 &
+numactl -m 1 -C 37 ./xexchange2_2017 6 &
+numactl -m 1 -C 38 ./xexchange2_2017 6 &
+numactl -m 1 -C 39 ./xexchange2_2017 6 &
+numactl -m 1 -C 40 ./xexchange2_2017 6 &
+numactl -m 1 -C 41 ./xexchange2_2017 6 &
+numactl -m 1 -C 42 ./xexchange2_2017 6 &
+numactl -m 1 -C 43 ./xexchange2_2017 6 &
+numactl -m 1 -C 44 ./xexchange2_2017 6 &
+numactl -m 1 -C 45 ./xexchange2_2017 6 &
+numactl -m 1 -C 46 ./xexchange2_2017 6 &
+numactl -m 1 -C 47 ./xexchange2_2017 6 &
+numactl -m 2 -C 48 ./xexchange2_2017 6 &
+numactl -m 2 -C 49 ./xexchange2_2017 6 &
+numactl -m 2 -C 50 ./xexchange2_2017 6 &
+numactl -m 2 -C 51 ./xexchange2_2017 6 &
+numactl -m 2 -C 52 ./xexchange2_2017 6 &
+numactl -m 2 -C 53 ./xexchange2_2017 6 &
+numactl -m 2 -C 54 ./xexchange2_2017 6 &
+numactl -m 2 -C 55 ./xexchange2_2017 6 &
+numactl -m 2 -C 56 ./xexchange2_2017 6 &
+numactl -m 2 -C 57 ./xexchange2_2017 6 &
+numactl -m 2 -C 58 ./xexchange2_2017 6 &
+numactl -m 2 -C 59 ./xexchange2_2017 6 &
+numactl -m 2 -C 60 ./xexchange2_2017 6 &
+numactl -m 2 -C 61 ./xexchange2_2017 6 &
+numactl -m 2 -C 62 ./xexchange2_2017 6 &
+numactl -m 2 -C 63 ./xexchange2_2017 6 &
+numactl -m 2 -C 64 ./xexchange2_2017 6 &
+numactl -m 2 -C 65 ./xexchange2_2017 6 &
+numactl -m 2 -C 66 ./xexchange2_2017 6 &
+numactl -m 2 -C 67 ./xexchange2_2017 6 &
+numactl -m 2 -C 68 ./xexchange2_2017 6 &
+numactl -m 2 -C 69 ./xexchange2_2017 6 &
+numactl -m 2 -C 70 ./xexchange2_2017 6 &
+numactl -m 2 -C 71 ./xexchange2_2017 6 &
+numactl -m 3 -C 72 ./xexchange2_2017 6 &
+numactl -m 3 -C 73 ./xexchange2_2017 6 &
+numactl -m 3 -C 74 ./xexchange2_2017 6 &
+numactl -m 3 -C 75 ./xexchange2_2017 6 &
+numactl -m 3 -C 76 ./xexchange2_2017 6 &
+numactl -m 3 -C 77 ./xexchange2_2017 6 &
+numactl -m 3 -C 78 ./xexchange2_2017 6 &
+numactl -m 3 -C 79 ./xexchange2_2017 6 &
+numactl -m 3 -C 80 ./xexchange2_2017 6 &
+numactl -m 3 -C 81 ./xexchange2_2017 6 &
+numactl -m 3 -C 82 ./xexchange2_2017 6 &
+numactl -m 3 -C 83 ./xexchange2_2017 6 &
+numactl -m 3 -C 84 ./xexchange2_2017 6 &
+numactl -m 3 -C 85 ./xexchange2_2017 6 &
+numactl -m 3 -C 86 ./xexchange2_2017 6 &
+numactl -m 3 -C 87 ./xexchange2_2017 6 &
+numactl -m 3 -C 88 ./xexchange2_2017 6 &
+numactl -m 3 -C 89 ./xexchange2_2017 6 &
+numactl -m 3 -C 90 ./xexchange2_2017 6 &
+numactl -m 3 -C 91 ./xexchange2_2017 6 &
+numactl -m 3 -C 92 ./xexchange2_2017 6 &
+numactl -m 3 -C 93 ./xexchange2_2017 6 &
+numactl -m 3 -C 94 ./xexchange2_2017 6 &
+numactl -m 3 -C 95 ./xexchange2_2017 6 &
+
+wait
+cat "/sys/cray/pm_counters/energy" >> genoa-pmc
+cat "/sys/cray/pm_counters/cpu_energy" >> genoa-pmc
+cat "/sys/cray/pm_counters/memory_energy" >> genoa-pmc &

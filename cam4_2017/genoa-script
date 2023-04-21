@@ -1,0 +1,106 @@
+cat "/sys/cray/pm_counters/energy" >> genoa-pmc
+cat "/sys/cray/pm_counters/cpu_energy" >> genoa-pmc
+cat "/sys/cray/pm_counters/memory_energy" >> genoa-pmc &
+wait
+
+numactl -m 0 -C 0 ./xcam4_2017 &
+numactl -m 0 -C 1 ./xcam4_2017 &
+numactl -m 0 -C 2 ./xcam4_2017 &
+numactl -m 0 -C 3 ./xcam4_2017 &
+numactl -m 0 -C 4 ./xcam4_2017 &
+numactl -m 0 -C 5 ./xcam4_2017 &
+numactl -m 0 -C 6 ./xcam4_2017 &
+numactl -m 0 -C 7 ./xcam4_2017 &
+numactl -m 0 -C 8 ./xcam4_2017 &
+numactl -m 0 -C 9 ./xcam4_2017 &
+numactl -m 0 -C 10 ./xcam4_2017 &
+numactl -m 0 -C 11 ./xcam4_2017 &
+numactl -m 0 -C 12 ./xcam4_2017 &
+numactl -m 0 -C 13 ./xcam4_2017 &
+numactl -m 0 -C 14 ./xcam4_2017 &
+numactl -m 0 -C 15 ./xcam4_2017 &
+numactl -m 0 -C 16 ./xcam4_2017 &
+numactl -m 0 -C 17 ./xcam4_2017 &
+numactl -m 0 -C 18 ./xcam4_2017 &
+numactl -m 0 -C 19 ./xcam4_2017 &
+numactl -m 0 -C 20 ./xcam4_2017 &
+numactl -m 0 -C 21 ./xcam4_2017 &
+numactl -m 0 -C 22 ./xcam4_2017 &
+numactl -m 0 -C 23 ./xcam4_2017 &
+numactl -m 1 -C 24 ./xcam4_2017 &
+numactl -m 1 -C 25 ./xcam4_2017 &
+numactl -m 1 -C 26 ./xcam4_2017 &
+numactl -m 1 -C 27 ./xcam4_2017 &
+numactl -m 1 -C 28 ./xcam4_2017 &
+numactl -m 1 -C 29 ./xcam4_2017 &
+numactl -m 1 -C 30 ./xcam4_2017 &
+numactl -m 1 -C 31 ./xcam4_2017 &
+numactl -m 1 -C 32 ./xcam4_2017 &
+numactl -m 1 -C 33 ./xcam4_2017 &
+numactl -m 1 -C 34 ./xcam4_2017 &
+numactl -m 1 -C 35 ./xcam4_2017 &
+numactl -m 1 -C 36 perf record -e cpu-cycles,cpu-clock ./xcam4_2017 &
+numactl -m 1 -C 37 ./xcam4_2017 &
+numactl -m 1 -C 38 ./xcam4_2017 &
+numactl -m 1 -C 39 ./xcam4_2017 &
+numactl -m 1 -C 40 ./xcam4_2017 &
+numactl -m 1 -C 41 ./xcam4_2017 &
+numactl -m 1 -C 42 ./xcam4_2017 &
+numactl -m 1 -C 43 ./xcam4_2017 &
+numactl -m 1 -C 44 ./xcam4_2017 &
+numactl -m 1 -C 45 ./xcam4_2017 &
+numactl -m 1 -C 46 ./xcam4_2017 &
+numactl -m 1 -C 47 ./xcam4_2017 &
+numactl -m 2 -C 48 ./xcam4_2017 &
+numactl -m 2 -C 49 ./xcam4_2017 &
+numactl -m 2 -C 50 ./xcam4_2017 &
+numactl -m 2 -C 51 ./xcam4_2017 &
+numactl -m 2 -C 52 ./xcam4_2017 &
+numactl -m 2 -C 53 ./xcam4_2017 &
+numactl -m 2 -C 54 ./xcam4_2017 &
+numactl -m 2 -C 55 ./xcam4_2017 &
+numactl -m 2 -C 56 ./xcam4_2017 &
+numactl -m 2 -C 57 ./xcam4_2017 &
+numactl -m 2 -C 58 ./xcam4_2017 &
+numactl -m 2 -C 59 ./xcam4_2017 &
+numactl -m 2 -C 60 ./xcam4_2017 &
+numactl -m 2 -C 61 ./xcam4_2017 &
+numactl -m 2 -C 62 ./xcam4_2017 &
+numactl -m 2 -C 63 ./xcam4_2017 &
+numactl -m 2 -C 64 ./xcam4_2017 &
+numactl -m 2 -C 65 ./xcam4_2017 &
+numactl -m 2 -C 66 ./xcam4_2017 &
+numactl -m 2 -C 67 ./xcam4_2017 &
+numactl -m 2 -C 68 ./xcam4_2017 &
+numactl -m 2 -C 69 ./xcam4_2017 &
+numactl -m 2 -C 70 ./xcam4_2017 &
+numactl -m 2 -C 71 ./xcam4_2017 &
+numactl -m 3 -C 72 ./xcam4_2017 &
+numactl -m 3 -C 73 ./xcam4_2017 &
+numactl -m 3 -C 74 ./xcam4_2017 &
+numactl -m 3 -C 75 ./xcam4_2017 &
+numactl -m 3 -C 76 ./xcam4_2017 &
+numactl -m 3 -C 77 ./xcam4_2017 &
+numactl -m 3 -C 78 ./xcam4_2017 &
+numactl -m 3 -C 79 ./xcam4_2017 &
+numactl -m 3 -C 80 ./xcam4_2017 &
+numactl -m 3 -C 81 ./xcam4_2017 &
+numactl -m 3 -C 82 ./xcam4_2017 &
+numactl -m 3 -C 83 ./xcam4_2017 &
+numactl -m 3 -C 84 ./xcam4_2017 &
+numactl -m 3 -C 85 ./xcam4_2017 &
+numactl -m 3 -C 86 ./xcam4_2017 &
+numactl -m 3 -C 87 ./xcam4_2017 &
+numactl -m 3 -C 88 ./xcam4_2017 &
+numactl -m 3 -C 89 ./xcam4_2017 &
+numactl -m 3 -C 90 ./xcam4_2017 &
+numactl -m 3 -C 91 ./xcam4_2017 &
+numactl -m 3 -C 92 ./xcam4_2017 &
+numactl -m 3 -C 93 ./xcam4_2017 &
+numactl -m 3 -C 94 ./xcam4_2017 &
+numactl -m 3 -C 95 ./xcam4_2017 &
+
+wait
+cat "/sys/cray/pm_counters/energy" >> genoa-pmc
+cat "/sys/cray/pm_counters/cpu_energy" >> genoa-pmc
+cat "/sys/cray/pm_counters/memory_energy" >> genoa-pmc &
